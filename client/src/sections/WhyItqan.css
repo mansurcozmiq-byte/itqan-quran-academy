@@ -2,29 +2,35 @@
   background: var(--cream);
 }
 
+.why__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
 .why__header {
-  margin-bottom: 2.75rem;
-  max-width: 520px;
+  margin-bottom: 2rem;
+  max-width: 100%;
 }
 
 .why__list {
   display: flex;
   flex-direction: column;
   gap: 0;
-  max-width: 720px;
 }
 
 .why__item {
   display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 1.25rem;
-  padding: 1.6rem 0;
+  grid-template-columns: 64px 1fr;
+  gap: 1.1rem;
+  padding: 1.35rem 0;
   position: relative;
   align-items: start;
 }
 
 .why__num {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--orange);
   line-height: 1.2;
@@ -33,38 +39,82 @@
 }
 
 .why__title {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: var(--green-deep);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
   font-weight: 700;
 }
 
 .why__desc {
   color: var(--text-muted);
-  font-size: 0.975rem;
+  font-size: 0.95rem;
   line-height: 1.7;
 }
 
 .why__divider {
   position: absolute;
   bottom: 0;
-  left: 72px;
+  left: 64px;
   right: 0;
   height: 1px;
   background: var(--border-soft);
 }
 
+/* Right image */
+.why__media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.why__media-frame {
+  width: 100%;
+  max-width: 480px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+  aspect-ratio: 4 / 5;
+}
+
+.why__media-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.why__media-frame:hover img {
+  transform: scale(1.03);
+}
+
+@media (max-width: 900px) {
+  .why__grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .why__media {
+    order: -1;
+  }
+
+  .why__media-frame {
+    max-width: 100%;
+    aspect-ratio: 16 / 11;
+  }
+}
+
 @media (max-width: 520px) {
   .why__item {
-    grid-template-columns: 52px 1fr;
-    gap: 0.9rem;
+    grid-template-columns: 48px 1fr;
+    gap: 0.85rem;
   }
 
   .why__num {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   .why__divider {
-    left: 52px;
+    left: 48px;
   }
 }
