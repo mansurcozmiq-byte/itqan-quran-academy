@@ -6,7 +6,6 @@ export default function WhyItqan() {
   return (
     <section className="section why">
       <div className="container why__grid">
-        {/* Left — content */}
         <div className="why__content">
           <div className="why__header">
             <span className="section-label">কেন আমরা</span>
@@ -32,9 +31,8 @@ export default function WhyItqan() {
           </div>
         </div>
 
-        {/* Right — image */}
         <div className="why__media">
-          <div className="why__media-frame">
+          <div className="why__media-frame islamic-window">
             <img
               src={academyImages.teacher}
               alt="ইতকান একাডেমির যোগ্য শিক্ষক ও শিক্ষার পরিবেশ"

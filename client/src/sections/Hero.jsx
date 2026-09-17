@@ -6,7 +6,6 @@ export default function Hero() {
   return (
     <section id="home" className="hero">
       <div className="container hero__grid">
-        {/* Left — text */}
         <div className="hero__content">
           <p className="hero__label">{siteInfo.name}</p>
           <h1 className="hero__title">
@@ -33,9 +32,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right — image */}
         <div className="hero__media">
-          <div className="hero__media-frame">
+          <div className="hero__media-frame islamic-window">
             <img
               src={academyImages.hero}
               alt="ইতকান কুরআন একাডেমি — ইসলামী শিক্ষা"

@@ -22,13 +22,13 @@ export default function Introduction() {
             যত্নশীল ও আনন্দময় ইসলামী শিক্ষার পরিবেশ তৈরি করেছি।
           </p>
         </div>
-        <div className="intro__media">
+        <div className="intro__media islamic-window">
           <img
             src={academyImages.classroom}
             alt="ইতকান একাডেমির শ্রেণিকক্ষ"
             loading="lazy"
             width="600"
-            height="450"
+            height="720"
           />
         </div>
       </div>

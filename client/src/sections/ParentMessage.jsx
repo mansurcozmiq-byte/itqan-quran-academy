@@ -5,13 +5,13 @@ export default function ParentMessage() {
   return (
     <section className="section parent">
       <div className="container parent__grid">
-        <div className="parent__media">
+        <div className="parent__media islamic-window">
           <img
             src={academyImages.parentChild}
             alt="অভিভাবক ও সন্তান"
             loading="lazy"
             width="560"
-            height="420"
+            height="680"
           />
         </div>
         <div className="parent__content">
