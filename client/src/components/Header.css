@@ -4,14 +4,17 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 1.1rem 0;
+  padding: 1rem 0;
+  background: rgba(251, 246, 238, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
 }
 
 .header--scrolled {
   background: rgba(251, 246, 238, 0.98);
   box-shadow: 0 1px 0 rgba(10, 77, 50, 0.08);
-  padding: 0.65rem 0;
+  padding: 0.6rem 0;
 }
 
 .header__inner {
@@ -58,7 +61,6 @@
   font-weight: 500;
   color: var(--text-dark);
   transition: color 0.2s;
-  position: relative;
 }
 
 .header__nav a:hover {
@@ -144,31 +146,5 @@
   .header__cta {
     width: 100%;
     margin-top: 0.5rem;
-  }
-}
-
-/* Transparent header over hero */
-.header:not(.header--scrolled) .header__logo-text {
-  color: #fff;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
-}
-
-.header:not(.header--scrolled) .header__nav a {
-  color: rgba(255, 255, 255, 0.95);
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-}
-
-.header:not(.header--scrolled) .header__nav a:hover {
-  color: #fff;
-}
-
-.header:not(.header--scrolled) .header__toggle span {
-  background: #fff;
-}
-
-@media (max-width: 960px) {
-  .header:not(.header--scrolled) .header__nav a {
-    color: var(--text-dark);
-    text-shadow: none;
   }
 }
