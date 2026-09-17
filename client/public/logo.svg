@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#0B5D3A"/>
+  <circle cx="100" cy="80" r="40" fill="#F5A623"/>
+  <text x="100" y="150" text-anchor="middle" fill="white" font-family="Arial" font-size="22" font-weight="bold">ইতকান</text>
+  <text x="100" y="175" text-anchor="middle" fill="#E8F5E9" font-family="Arial" font-size="12">কুরআন একাডেমি</text>
+</svg>

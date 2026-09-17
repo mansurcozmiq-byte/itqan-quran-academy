@@ -1,0 +1,154 @@
+.programs {
+  background: var(--cream);
+}
+
+.programs__header {
+  margin-bottom: 2.75rem;
+}
+
+/* Featured: horizontal 16:9 editorial */
+.programs__featured {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  gap: 0;
+  align-items: stretch;
+  margin-bottom: 2.5rem;
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+}
+
+.programs__featured-img {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  min-height: 280px;
+}
+
+.programs__featured-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.programs__featured:hover .programs__featured-img img {
+  transform: scale(1.04);
+}
+
+.programs__featured-body {
+  padding: 2.5rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.programs__num {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--orange);
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.04em;
+}
+
+.programs__title {
+  font-size: 1.45rem;
+  color: var(--green-deep);
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.programs__desc {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-size: 0.975rem;
+}
+
+/* Other courses — varied, not identical cards */
+.programs__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.programs__card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.programs__card:hover {
+  border-color: var(--green-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.programs__card-img {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.programs__card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.programs__card:hover .programs__card-img img {
+  transform: scale(1.05);
+}
+
+.programs__card-body {
+  padding: 1.35rem 1.4rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.programs__card-body .programs__title {
+  font-size: 1.2rem;
+}
+
+.programs__card-body .programs__desc {
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.programs__link {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--green-deep);
+  font-size: 0.9rem;
+  margin-top: auto;
+  transition: color 0.2s;
+}
+
+.programs__link:hover {
+  color: var(--orange);
+}
+
+@media (max-width: 900px) {
+  .programs__featured {
+    grid-template-columns: 1fr;
+  }
+
+  .programs__featured-img {
+    aspect-ratio: 16 / 9;
+    min-height: 200px;
+  }
+
+  .programs__featured-body {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .programs__grid {
+    grid-template-columns: 1fr;
+  }
+}
