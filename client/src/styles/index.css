@@ -1,28 +1,37 @@
-/* Itqan Quran Academy — Kids-friendly Islamic Visual System */
-/* Warm Green + Soft Orange + Cream */
+/* Itqan Quran Academy — Premium Soft Realistic System */
+/* Soft sage green · Warm ivory · Clean white */
 
 :root {
-  --green-deep: #0C5C3A;
-  --green-mid: #148A55;
-  --green-light: #E8F5E9;
-  --green-soft: #c5e0cc;
-  --orange: #E8882A;
-  --orange-warm: #F5B041;
-  --orange-light: #FFF4E6;
-  --cream: #FFF8F0;
-  --ivory: #FFFEF9;
-  --warm-white: #FFFCF8;
-  --sage: #9CB8A6;
-  --text-dark: #15261c;
-  --text-body: #3d4f42;
-  --text-muted: #5a6e60;
-  --border-soft: #d8e6dc;
-  --shadow-soft: 0 4px 18px rgba(12, 92, 58, 0.08);
-  --shadow-lift: 0 10px 32px rgba(12, 92, 58, 0.12);
-  --radius: 12px;
-  --radius-sm: 8px;
+  --green-deep: #1B4D3E;
+  --green-mid: #2D6A4F;
+  --green-soft: #A8C5B5;
+  --green-mist: #E8F0EB;
+  --green-light: #F2F7F4;
+
+  --cream: #F7F3EC;
+  --ivory: #FAF7F2;
+  --warm-white: #FBF9F6;
+  --white: #FFFFFF;
+
+  --orange: #C4783A;
+  --orange-warm: #D4925A;
+  --orange-light: #F8EFE6;
+
+  --text-dark: #1A2E26;
+  --text-body: #3E5249;
+  --text-muted: #6B7C74;
+
+  --border-soft: #E2EAE5;
+  --border-warm: #EDE7DE;
+
+  --shadow-soft: 0 2px 16px rgba(27, 77, 62, 0.05);
+  --shadow-lift: 0 8px 30px rgba(27, 77, 62, 0.08);
+  --shadow-card: 0 1px 3px rgba(27, 77, 62, 0.04), 0 6px 20px rgba(27, 77, 62, 0.05);
+
+  --radius: 10px;
+  --radius-sm: 6px;
   --font-bn: "Hind Siliguri", "Noto Sans Bengali", system-ui, sans-serif;
-  --space-section: clamp(4.5rem, 8vw, 7rem);
+  --space-section: clamp(4.75rem, 8vw, 7.25rem);
   --space-block: clamp(2rem, 4vw, 3rem);
 }
 
@@ -42,7 +51,7 @@ html {
 body {
   font-family: var(--font-bn);
   color: var(--text-body);
-  background: var(--warm-white);
+  background: var(--white);
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -73,20 +82,20 @@ ul, ol {
 
 h1, h2, h3, h4 {
   font-weight: 700;
-  line-height: 1.28;
+  line-height: 1.3;
   color: var(--text-dark);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 }
 
 .container {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
 .container-wide {
-  max-width: 1280px;
+  max-width: 1240px;
 }
 
 .btn {
@@ -94,12 +103,12 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.9rem 1.85rem;
-  font-size: 0.975rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 0.95rem;
   font-weight: 600;
   border-radius: var(--radius);
-  transition: background 0.22s ease, transform 0.18s ease, box-shadow 0.22s ease;
-  min-height: 50px;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  min-height: 48px;
   letter-spacing: 0.01em;
 }
 
@@ -109,15 +118,15 @@ h1, h2, h3, h4 {
 }
 
 .btn-primary:hover {
-  background: #d4741f;
+  background: #b36a32;
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(232, 136, 42, 0.3);
+  box-shadow: 0 4px 14px rgba(196, 120, 58, 0.28);
 }
 
 .btn-secondary {
   background: transparent;
   color: #fff;
-  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
 }
 
 .btn-secondary:hover {
@@ -133,7 +142,30 @@ h1, h2, h3, h4 {
 .btn-green:hover {
   background: var(--green-mid);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(12, 92, 58, 0.25);
+  box-shadow: 0 4px 14px rgba(27, 77, 62, 0.22);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  min-height: 48px;
+  background: transparent;
+  color: var(--green-deep);
+  border: 1.5px solid var(--green-soft);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-outline:hover {
+  background: var(--green-deep);
+  color: #fff;
+  border-color: var(--green-deep);
+  transform: translateY(-1px);
 }
 
 .section {
@@ -142,35 +174,34 @@ h1, h2, h3, h4 {
 
 .section-label {
   display: inline-block;
-  font-size: 0.8125rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: var(--orange);
-  letter-spacing: 0.03em;
-  margin-bottom: 0.85rem;
-  text-transform: none;
-  background: var(--orange-light);
-  padding: 0.35rem 0.9rem;
+  color: var(--green-mid);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.9rem;
+  background: var(--green-mist);
+  padding: 0.3rem 0.85rem;
   border-radius: 999px;
 }
 
 .section-title {
-  font-size: clamp(1.65rem, 3.8vw, 2.35rem);
-  margin-bottom: 1.1rem;
+  font-size: clamp(1.6rem, 3.6vw, 2.25rem);
+  margin-bottom: 1rem;
   color: var(--green-deep);
-  line-height: 1.3;
+  line-height: 1.32;
   font-weight: 700;
 }
 
 .section-subtitle {
   font-size: 1.05rem;
   color: var(--text-muted);
-  max-width: 560px;
+  max-width: 540px;
   line-height: 1.7;
   font-weight: 400;
 }
 
 :focus-visible {
-  outline: 2.5px solid var(--orange);
+  outline: 2px solid var(--orange);
   outline-offset: 3px;
 }
 
@@ -205,16 +236,16 @@ h1, h2, h3, h4 {
 }
 
 .img-lift:hover img {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
-/* Islamic arch window — soft kids-friendly frame */
 .islamic-window {
   position: relative;
   overflow: hidden;
-  border-radius: 50% 50% 12px 12px / 28% 28% 12px 12px;
-  border: 3px solid var(--green-soft);
-  box-shadow: var(--shadow-soft);
+  border-radius: 50% 50% 10px 10px / 26% 26% 10px 10px;
+  border: 1.5px solid var(--border-soft);
+  box-shadow: var(--shadow-card);
+  background: var(--white);
 }
 
 .islamic-window img {
@@ -227,9 +258,9 @@ h1, h2, h3, h4 {
 .islamic-window::before {
   content: "";
   position: absolute;
-  inset: 6px;
-  border-radius: 50% 50% 8px 8px / 26% 26% 8px 8px;
-  border: 1px solid rgba(12, 92, 58, 0.15);
+  inset: 5px;
+  border-radius: 50% 50% 6px 6px / 24% 24% 6px 6px;
+  border: 1px solid rgba(27, 77, 62, 0.1);
   pointer-events: none;
   z-index: 1;
 }
