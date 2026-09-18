@@ -1,5 +1,5 @@
 .why {
-  background: var(--cream);
+  background: var(--green-mist);
 }
 
 .why__grid {
@@ -60,7 +60,6 @@
   background: var(--border-soft);
 }
 
-/* Right image */
 .why__media {
   display: flex;
   justify-content: center;
@@ -69,11 +68,7 @@
 
 .why__media-frame {
   width: 100%;
-  max-width: 480px;
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--border-soft);
-  box-shadow: var(--shadow-soft);
+  max-width: 440px;
   aspect-ratio: 4 / 5;
 }
 
