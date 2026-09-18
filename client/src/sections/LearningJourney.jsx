@@ -5,7 +5,7 @@ export default function LearningJourney() {
   return (
     <section id="journey" className="section journey">
       <div className="container">
-        <div className="journey__header">
+        <div className="journey__header section-header-center">
           <span className="section-label">শিক্ষার ধারা</span>
           <h2 className="section-title">শেখার একটি সুন্দর পথ</h2>
         </div>

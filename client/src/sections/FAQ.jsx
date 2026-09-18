@@ -12,7 +12,7 @@ export default function FAQ() {
   return (
     <section id="faq" className="section faq">
       <div className="container faq__wrap">
-        <div className="faq__header">
+        <div className="faq__header section-header-center">
           <span className="section-label">প্রশ্নোত্তর</span>
           <h2 className="section-title">অভিভাবকদের সাধারণ প্রশ্ন</h2>
         </div>

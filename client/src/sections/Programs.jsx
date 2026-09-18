@@ -9,12 +9,11 @@ export default function Programs() {
   return (
     <section id="programs" className="section programs">
       <div className="container">
-        <div className="programs__header">
+        <div className="programs__header section-header-center">
           <span className="section-label">আমাদের শিক্ষা</span>
           <h2 className="section-title">আমাদের কোর্সসমূহ</h2>
         </div>
 
-        {/* Featured Course - horizontal large */}
         {featured && (
           <article className="programs__featured">
             <div className="programs__featured-img">
@@ -42,10 +41,9 @@ export default function Programs() {
           </article>
         )}
 
-        {/* Other courses - editorial grid */}
         <div className="programs__grid">
           {others.map((p, i) => (
-            <article key={p.id} className="programs__card">
+            <article key={p.id} className="programs__card card-lift">
               <div className="programs__card-img">
                 <img
                   src={academyImages[p.imageKey]}
