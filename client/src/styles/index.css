@@ -1,37 +1,38 @@
-/* Itqan Quran Academy — Premium Soft Realistic System */
-/* Soft sage green · Warm ivory · Clean white */
+/* Itqan Quran Academy — Inspired by modern Islamic center aesthetic */
+/* Clean · Minimal · Emerald + Soft Gold · Generous whitespace */
 
 :root {
-  --green-deep: #1B4D3E;
-  --green-mid: #2D6A4F;
-  --green-soft: #A8C5B5;
-  --green-mist: #E8F0EB;
-  --green-light: #F2F7F4;
+  --green-deep: #0F3D2E;
+  --green-mid: #1A5C44;
+  --green-soft: #8FB5A3;
+  --green-mist: #E6F0EB;
+  --green-light: #F3F8F5;
 
-  --cream: #F7F3EC;
-  --ivory: #FAF7F2;
-  --warm-white: #FBF9F6;
+  --cream: #F6F2EB;
+  --ivory: #FAF8F4;
+  --warm-white: #FCFBFA;
   --white: #FFFFFF;
 
-  --orange: #C4783A;
-  --orange-warm: #D4925A;
-  --orange-light: #F8EFE6;
+  --orange: #C9A227;
+  --orange-warm: #D4AF37;
+  --orange-light: #F7F1DE;
+  --gold: #C9A227;
 
-  --text-dark: #1A2E26;
-  --text-body: #3E5249;
-  --text-muted: #6B7C74;
+  --text-dark: #142820;
+  --text-body: #3A4A42;
+  --text-muted: #667872;
 
-  --border-soft: #E2EAE5;
-  --border-warm: #EDE7DE;
+  --border-soft: #DCE8E2;
+  --border-warm: #EBE6DC;
 
-  --shadow-soft: 0 2px 16px rgba(27, 77, 62, 0.05);
-  --shadow-lift: 0 8px 30px rgba(27, 77, 62, 0.08);
-  --shadow-card: 0 1px 3px rgba(27, 77, 62, 0.04), 0 6px 20px rgba(27, 77, 62, 0.05);
+  --shadow-soft: 0 2px 12px rgba(15, 61, 46, 0.04);
+  --shadow-lift: 0 12px 40px rgba(15, 61, 46, 0.07);
+  --shadow-card: 0 1px 2px rgba(15, 61, 46, 0.03), 0 8px 24px rgba(15, 61, 46, 0.05);
 
-  --radius: 10px;
-  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-sm: 4px;
   --font-bn: "Hind Siliguri", "Noto Sans Bengali", system-ui, sans-serif;
-  --space-section: clamp(4.75rem, 8vw, 7.25rem);
+  --space-section: clamp(5rem, 9vw, 7.5rem);
   --space-block: clamp(2rem, 4vw, 3rem);
 }
 
@@ -84,18 +85,18 @@ h1, h2, h3, h4 {
   font-weight: 700;
   line-height: 1.3;
   color: var(--text-dark);
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
 }
 
 .container {
   width: 100%;
-  max-width: 1120px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
 .container-wide {
-  max-width: 1240px;
+  max-width: 1280px;
 }
 
 .btn {
@@ -103,34 +104,34 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.875rem 1.75rem;
+  padding: 0.9rem 1.85rem;
   font-size: 0.95rem;
   font-weight: 600;
   border-radius: var(--radius);
-  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-  min-height: 48px;
-  letter-spacing: 0.01em;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  min-height: 50px;
+  letter-spacing: 0.02em;
 }
 
 .btn-primary {
-  background: var(--orange);
-  color: #fff;
+  background: var(--gold);
+  color: #1a1a1a;
 }
 
 .btn-primary:hover {
-  background: #b36a32;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(196, 120, 58, 0.28);
+  background: #b89220;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 162, 39, 0.3);
 }
 
 .btn-secondary {
   background: transparent;
   color: #fff;
-  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
   border-color: #fff;
 }
 
@@ -141,8 +142,8 @@ h1, h2, h3, h4 {
 
 .btn-green:hover {
   background: var(--green-mid);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(27, 77, 62, 0.22);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(15, 61, 46, 0.25);
 }
 
 .btn-outline {
@@ -150,58 +151,83 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.875rem 1.75rem;
+  padding: 0.9rem 1.85rem;
   font-size: 0.95rem;
   font-weight: 600;
   border-radius: var(--radius);
-  min-height: 48px;
+  min-height: 50px;
   background: transparent;
   color: var(--green-deep);
-  border: 1.5px solid var(--green-soft);
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  border: 1.5px solid var(--green-deep);
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
 }
 
 .btn-outline:hover {
   background: var(--green-deep);
   color: #fff;
-  border-color: var(--green-deep);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .section {
   padding: var(--space-section) 0;
 }
 
+.section-header-center {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 3rem;
+}
+
+.section-header-center .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .section-label {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  color: var(--green-mid);
-  letter-spacing: 0.04em;
-  margin-bottom: 0.9rem;
-  background: var(--green-mist);
-  padding: 0.3rem 0.85rem;
-  border-radius: 999px;
+  color: var(--gold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
 }
 
 .section-title {
-  font-size: clamp(1.6rem, 3.6vw, 2.25rem);
+  font-size: clamp(1.65rem, 3.5vw, 2.35rem);
   margin-bottom: 1rem;
   color: var(--green-deep);
-  line-height: 1.32;
+  line-height: 1.3;
   font-weight: 700;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: var(--gold);
+  margin-top: 0.85rem;
+}
+
+.section-header-center .section-title::after {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-subtitle {
   font-size: 1.05rem;
   color: var(--text-muted);
-  max-width: 540px;
+  max-width: 560px;
   line-height: 1.7;
   font-weight: 400;
 }
 
 :focus-visible {
-  outline: 2px solid var(--orange);
+  outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
 
@@ -227,23 +253,19 @@ h1, h2, h3, h4 {
   border: 0;
 }
 
-.img-lift {
-  overflow: hidden;
-}
-
 .img-lift img {
-  transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .img-lift:hover img {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 .islamic-window {
   position: relative;
   overflow: hidden;
-  border-radius: 50% 50% 10px 10px / 26% 26% 10px 10px;
-  border: 1.5px solid var(--border-soft);
+  border-radius: 50% 50% 6px 6px / 24% 24% 6px 6px;
+  border: 1px solid var(--border-soft);
   box-shadow: var(--shadow-card);
   background: var(--white);
 }
@@ -258,9 +280,18 @@ h1, h2, h3, h4 {
 .islamic-window::before {
   content: "";
   position: absolute;
-  inset: 5px;
-  border-radius: 50% 50% 6px 6px / 24% 24% 6px 6px;
-  border: 1px solid rgba(27, 77, 62, 0.1);
+  inset: 4px;
+  border-radius: 50% 50% 4px 4px / 22% 22% 4px 4px;
+  border: 1px solid rgba(15, 61, 46, 0.08);
   pointer-events: none;
   z-index: 1;
+}
+
+.card-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lift);
 }
