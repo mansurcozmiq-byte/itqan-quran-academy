@@ -1,0 +1,246 @@
+/* ============================================
+   ইতকান কুরআন একাডেমি — Design System
+   High-contrast · Readable · Architectural
+   ============================================ */
+
+:root {
+  --green-deep: #0A3328;
+  --green-main: #0F4C3A;
+  --green-mid: #16634A;
+  --green-soft: #2E8B6A;
+  --green-light: #E6F3ED;
+  --green-muted: #C8E2D6;
+
+  --orange: #ff4d00;
+  --orange-soft: #fc762f;
+  --orange-light: #FFEDD5;
+  --yellow: #A16207;
+  --blue: #0E7490;
+  --sage: #4A6B5A;
+
+  --cream: #F7F3EA;
+  --ivory: #FDFBF7;
+  --warm-white: #FFFEFB;
+  --sand: #E5DCCB;
+  --sand-muted: #D0C6B0;
+  --charcoal: #1C1917;
+  --charcoal-soft: #3F3A36;
+  --gray: #57534E;
+  --gray-light: #78716C;
+
+  --gold: #A16207;
+  --gold-soft: #CA8A04;
+
+  --font-display: "Hind Siliguri", "Noto Sans Bengali", system-ui, sans-serif;
+  --font-body: "Noto Sans Bengali", "Hind Siliguri", system-ui, sans-serif;
+  --font-serif: "Noto Serif Bengali", "Noto Sans Bengali", serif;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+
+  --container: 1180px;
+  --container-wide: 1360px;
+  --radius-sm: 3px;
+  --radius-md: 6px;
+
+  --border: 1px solid rgba(10, 51, 40, 0.14);
+  --border-strong: 1px solid rgba(10, 51, 40, 0.24);
+  --border-light: 1px solid rgba(10, 51, 40, 0.1);
+
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --duration: 0.4s;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.0625rem; /* ~17px */
+  line-height: 1.75;
+  color: var(--charcoal);
+  background-color: var(--ivory);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+@media (max-width: 600px) {
+  body { font-size: 1rem; } /* 16px mobile */
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+ul, ol { list-style: none; }
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.container-wide {
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.section { padding: var(--space-2xl) 0; }
+
+.section-label {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  margin-bottom: var(--space-sm);
+  display: inline-block;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4.2vw, 2.9rem);
+  font-weight: 700;
+  line-height: 1.22;
+  color: var(--green-deep);
+  margin-bottom: var(--space-md);
+}
+
+.section-sub {
+  font-size: 1.1rem;
+  color: var(--charcoal-soft);
+  max-width: 40rem;
+  line-height: 1.75;
+}
+
+/* Buttons — high contrast */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.9rem 1.85rem;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--duration) var(--ease),
+              color var(--duration) var(--ease),
+              border-color var(--duration) var(--ease);
+  border: 1.5px solid transparent;
+  letter-spacing: 0.01em;
+  min-height: 48px;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+}
+
+.btn-sm {
+  font-size: 0.92rem;
+  padding: 0.7rem 1.25rem;
+  min-height: 42px;
+}
+
+.btn-primary {
+  background-color: var(--orange);
+  color: #fff;
+  border-color: var(--orange);
+}
+.btn-primary:hover {
+  background-color: #9A3412;
+  border-color: #9A3412;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--green-deep);
+  border-color: var(--green-deep);
+}
+.btn-secondary:hover {
+  background-color: var(--green-deep);
+  color: #fff;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: var(--green-deep);
+  border-color: #fff;
+}
+.btn-white:hover {
+  background-color: var(--cream);
+  color: var(--green-deep);
+}
+
+.btn-outline-white {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.85);
+}
+.btn-outline-white:hover {
+  background: #fff;
+  color: var(--green-deep);
+  border-color: #fff;
+}
+
+.arch-frame {
+  border-radius: 50% 50% 0 0 / 32% 32% 0 0;
+  overflow: hidden;
+}
+.arch-frame-sm {
+  border-radius: 50% 50% 0 0 / 28% 28% 0 0;
+  overflow: hidden;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--green-deep);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 9999;
+  border-radius: var(--radius-sm);
+}
+.skip-link:focus { top: 1rem; }
+
+::selection {
+  background: var(--green-light);
+  color: var(--green-deep);
+}
+
+/* Content always visible — never rely on JS opacity */
+.reveal,
+.img-reveal,
+.hero-text > *,
+.hero-visual {
+  opacity: 1;
+  visibility: visible;
+}
