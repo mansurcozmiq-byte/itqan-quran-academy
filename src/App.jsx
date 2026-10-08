@@ -119,30 +119,47 @@ function App() {
     };
   }, [videoOpen, activeProgram]);
 
-  const handleFormSubmit = (e) => {
+    const [formStatus, setFormStatus] = useState(null);
+  const [formError, setFormError] = useState('');
+
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
     const fd = new FormData(e.target);
-    const parent = fd.get('parent') || '';
-    const child = fd.get('child') || '';
-    const age = fd.get('age') || '';
-    const phone = fd.get('phone') || '';
-    const course = fd.get('course') || '';
-    const message = fd.get('message') || '';
+    const parent = (fd.get('parent') || '').toString().trim();
+    const child = (fd.get('child') || '').toString().trim();
+    const age = (fd.get('age') || '').toString().trim();
+    const phone = (fd.get('phone') || '').toString().trim();
+    const course = (fd.get('course') || '').toString().trim();
+    const message = (fd.get('message') || '').toString().trim();
 
-    const text = [
-      'আসসালামু আলাইকুম। আমি আমার সন্তানের জন্য ইতকান কুরআন একাডেমি সম্পর্কে জানতে চাই।',
-      '',
-      `অভিভাবকের নাম: ${parent}`,
-      `সন্তানের নাম: ${child}`,
-      `বয়স: ${age}`,
-      `ফোন: ${phone}`,
-      `আগ্রহের কোর্স: ${course}`,
-      message ? `বার্তা: ${message}` : '',
-    ]
-      .filter(Boolean)
-      .join('\n');
+    if (!sb) {
+      setFormError('ফর্ম কনফিগারেশন নেই।');
+      setFormStatus('err');
+      return;
+    }
 
-    openWhatsApp(text);
+    setFormStatus('loading');
+    setFormError('');
+
+    const { error } = await sb.from('leads').insert({
+      parent_name: parent,
+      child_name: child,
+      age: age || null,
+      phone,
+      course: course || null,
+      message: message || null,
+      status: 'New',
+    });
+
+    if (error) {
+      console.error(error);
+      setFormError('জমা দিতে সমস্যা হয়েছে।');
+      setFormStatus('err');
+      return;
+    }
+
+    setFormStatus('ok');
+    e.target.reset();
   };
 
   return (
