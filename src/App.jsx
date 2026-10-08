@@ -11,7 +11,7 @@ import {
   funMoments,
   WA_MESSAGES,
 } from './data/content';
-
+import { sb } from './lib/supabase';
 /** Single WhatsApp entry point — never hardcode wa.me elsewhere */
 function openWhatsApp(message = WA_MESSAGES.general) {
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
