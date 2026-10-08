@@ -808,9 +808,19 @@ function App() {
                     placeholder="আপনার প্রশ্ন বা মন্তব্য..."
                   />
                 </label>
-                <button type="submit" className="btn btn-primary">
-                  Send WhatsApp
-                </button>
+                {formStatus === 'ok' && (
+  <p role="status">আপনার আবেদন জমা হয়েছে। শীঘ্রই আমরা যোগাযোগ করব।</p>
+)}
+{formStatus === 'err' && (
+  <p role="alert">{formError}</p>
+)}
+<button
+  type="submit"
+  className="btn btn-primary"
+  disabled={formStatus === 'loading'}
+>
+  {formStatus === 'loading' ? 'পাঠানো হচ্ছে…' : 'জমা দিন'}
+</button>
               </form>
             </div>
           </div>
