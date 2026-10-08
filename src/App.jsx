@@ -819,7 +819,7 @@ function App() {
   className="btn btn-primary"
   disabled={formStatus === 'loading'}
 >
-  {formStatus === 'loading' ? 'পাঠানো হচ্ছে…' : 'জমা দিন'}
+  {formStatus === 'loading' ? 'Sending…' : 'Send'}
 </button>
               </form>
             </div>
